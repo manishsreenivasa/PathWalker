@@ -1,0 +1,88 @@
+rbdl_geometry - an advanced geometry library for RBDL
+Copyright (c) 2016 Matthew Millard <matthew.millard@iwr.uni-heidelberg.de>
+
+DESCRIPTION
+
+This library contains a numerical tool kit and a function factory 
+(SmoothSegmentedFunctionFactory) which builds C2 continuous curves for 
+specific applications. The numerical tool kits created thus far are:
+
+SegmentedQuinticBezierToolkit:  highly optimized library for creating and
+                                evaluating quintic 2D Bezier curves.
+
+and the functions listed in the function factory primarily relate to 
+
+  1) linear muscle profiles
+	  -active-force-length profile
+	  -passive-force-length profile
+	  -force-velocity provile
+	  -tendon-force-length profile
+	  ... and a bunch of non-standard compressive elements
+        for use with a muscle model that has a small mass
+        between the tendon and the muscle - the
+        Millard2012AccelerationMuscle in OpenSim.
+
+  2) torque muscle profiles
+	-Anderson2007ActiveTorqueAngleCurve
+  -Anderson2007ActiveTorqueVelocityCurve
+	-Anderson2007PassiveTorqueAngleCurve
+
+  3) neuroswing orthoses spring
+	
+FUTURE DEVELOPMENT
+
+In the near future this library will also contain
+
+1. Geometry tools to represent C2 convex implicit surfaces and enforce 
+   contact constraints between two surfaces. This tool kit will be first
+   used for simulating foot-ground contact. It could later be used for
+   3D muscle wrapping:
+
+   SmoothImplicitSurfaceToolkit
+   SmoothImplicitSurface
+  
+2. Geometry tools to represent quintic Pythagorean Hodograph curves - which are
+   special Bezier curves that have an analytic equation for arc-length. This 
+   package will also contain code to represent polar Pythagorean Hodographs 
+   which will be first used to formulate a foot-ground joint. Later this toolkit
+   will be used for a 2D cable transmission system 
+   (to simulate muscle wrapping).
+
+   SegmentedQuinticPythagoreanHodographToolkit
+   PolarFunctionToolkit
+
+
+DOCUMENTATION
+
+The documentation for this addon is built with the RBDL documentation. You
+can find it in Modules -> Addon: rbdl_geometry.
+
+LICENSING
+
+This code is published under the zlib license, however some parts of the
+library are taken from other open-source projects and are licensed under
+different terms.
+
+Full license text:
+
+-------
+Copyright (c) 2016 Matthew Millard <matthew.millard@iwr.uni-heidelberg.de>
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+   1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+
+   2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   3. This notice may not be removed or altered from any source
+   distribution.

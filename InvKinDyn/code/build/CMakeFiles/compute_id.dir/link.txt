@@ -1,0 +1,1 @@
+/usr/bin/c++        CMakeFiles/compute_id.dir/compute_id.cc.o  -o compute_id  -L/usr/local/lib/btk-0.3dev -rdynamic /home/manish/installed/lib/librbdl.so /home/manish/installed/lib/librbdl_luamodel.so -lBTKCommon -lBTKBasicFilters -lBTKIO -lBTKCommon -Wl,-rpath,/usr/local/lib/btk-0.3dev:/home/manish/installed/lib 

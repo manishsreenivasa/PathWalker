@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "Running ID for model -> Barefeet Walking"
+dataPath='../../Data'
+for file in $dataPath/c3d_barefeet/*.c3d
+do
+	nameis=$(basename $file .c3d)
+	echo " - Processing file $nameis"
+	./build/compute_id ../results/barefeet_$nameis.csv ../../Models/barefeet.lua $file
+	mv id_res.txt ../results/barefeet_$nameis.torque
+	mv id_q.txt ../results/barefeet_$nameis.q
+	mv id_qdot.txt ../results/barefeet_$nameis.qdot
+done
+echo "Running ID for model -> Orthosis Walking"
+for file in $dataPath/c3d_orthosis/*.c3d
+do
+	nameis=$(basename $file .c3d)
+	echo " - Processing file $nameis"
+	./build/compute_id ../results/orthosis_$nameis.csv ../../Models/orthosis.lua $file
+	mv id_res.txt ../results/orthosis_$nameis.torque
+	mv id_q.txt ../results/orthosis_$nameis.q
+	mv id_qdot.txt ./results/orthosis_$nameis.qdot
+done

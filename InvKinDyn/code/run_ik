@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "Running IK for model -> Barefeet Walking"
+dataPath='../../Data'
+for file in $dataPath/c3d_barefeet/*.c3d
+do
+	nameis=$(basename $file .c3d)
+	echo " - Processing file $nameis"
+	fit_motion_automarkers ../../Models/barefeet.lua $file
+	mv animation.csv ../results/barefeet_$nameis.csv
+	mv fitting_log.csv ../results/barefeet_$nameis.fit
+	mv misc_log.csv ../results/barefeet_$nameis.log
+done
+echo "Running IK for model -> Orthosis Walking"
+for file in $dataPath/c3d_orthosis/*.c3d
+do
+	nameis=$(basename $file .c3d)
+	echo " - Processing file $nameis"
+	fit_motion_automarkers ../../Models/orthosis.lua $file
+	mv animation.csv ../results/orthosis_$nameis.csv
+	mv fitting_log.csv ../results/orthosis_$nameis.fit
+	mv misc_log.csv ../results/orthosis_$nameis.log
+done

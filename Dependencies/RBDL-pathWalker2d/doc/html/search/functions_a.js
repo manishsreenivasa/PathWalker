@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['neuroswingtorsionspring',['NeuroSwingTorsionSpring',['../d2/df9/class_rigid_body_dynamics_1_1_addons_1_1_custom_forces_1_1_neuro_swing_torsion_spring.html#a995d7250415756aabd2d565482923698',1,'RigidBodyDynamics::Addons::CustomForces::NeuroSwingTorsionSpring::NeuroSwingTorsionSpring()'],['../d2/df9/class_rigid_body_dynamics_1_1_addons_1_1_custom_forces_1_1_neuro_swing_torsion_spring.html#a71ee6001afd5864149e8a4b8810902f7',1,'RigidBodyDynamics::Addons::CustomForces::NeuroSwingTorsionSpring::NeuroSwingTorsionSpring(double angleHardStopInPlantarFlexion, double angleCenterOffset, double angleHardStopInDorsiFlexion, double stiffnessEndRangeInPlantarFlexion, double stiffnessInPlantarFlexion, double stiffnessInDorsiFlexion, double stiffnessEndRangeInDorsiFlexion, double anglePreloadWindow, double torquePreload, double jointAngleOffset, double jointAngleSign, double jointTorqueSign, const std::string &amp;springName)']]],
+  ['nonlineareffects',['NonlinearEffects',['../d6/d63/group__dynamics__group.html#gadba68402f3a7ad13991196c823ae2a38',1,'RigidBodyDynamics']]]
+];
